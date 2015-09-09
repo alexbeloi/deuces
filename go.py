@@ -1,4 +1,4 @@
-from .deuces import Card, Evaluator, Deck
+from deuces import Card, Evaluator, Deck
 
 # create a card
 card = Card.new('Qh')
