@@ -1,4 +1,4 @@
-from random import shuffle
+from random import shuffle, sample
 from .card import Card
 
 class Deck:
@@ -25,6 +25,12 @@ class Deck:
         for i in range(n):
             cards.append(self.draw())
         return cards
+
+    def sample(self, n=1):
+        return sample(self.cards, n)
+
+    def remove(self, card):
+        self.cards.remove(card)
 
     def __str__(self):
         return Card.print_pretty_cards(self.cards)
